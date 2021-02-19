@@ -1,0 +1,371 @@
+<div class="container">
+      <input type="radio" name="tab" id="signin" checked="checked"/>
+      <input type="radio" name="tab" id="signup"/>
+      <div class="pages">
+        <div class="page">
+          <img src="./assets/images/favicons/android-chrome-192x192.png" alt="brand-logo" class="brand-logo"/>
+          <h2>Welcome to Cool Blogger</h2>
+          <p>Find new ideas to try</p>
+          <div class="input">
+            <div class="title">
+              Username
+            </div>
+            <input type="text" class="text" placeholder=""/>
+          </div>
+          <div class="input">
+            <div class="title">
+              Password
+            </div>
+            <input type="password" class='text' placeholder=""/>
+          </div>
+          <div class="input">
+            <input type="submit" value="Continue"/>
+          </div>
+        </div>
+        <div class="page singup">
+          <img src="./assets/images/favicons/android-chrome-192x192.png" alt="" class="brand-logo">
+          <h2>Welcome to Cool Blogger</h2>
+          <p>Find new ideas to try</p>
+          <div class="input">
+            <div class="title">
+              Name
+            </div>
+            <input type="text" class="text" placeholder=""/>
+          </div>
+          <div class="input">
+            <div class="title">
+              Email
+            </div>
+            <input type="password" class="text" placeholder=""/>
+          </div>
+          <div class="input">
+            <input type="submit" value="Register Now"/>
+          </div>
+        </div>
+      </div>
+      <label for="signin" class="tab">
+        <div class="text">Already have a Account ? Sign In</div>
+      </label>
+      <label for="signup" class="tab">
+        <div class="text">Don't have account ? Register</div>
+      </label>
+    </div>
+    ------------------------------------------------------------------------------------------------------------------
+    .pages {
+  flex: 1;
+  white-space: nowrap;
+  position: relative;
+  transition: all 0.4s;
+  display: flex;
+}
+
+.pages .pages {
+  min-width: 100%;
+  padding: 20px 15px 0;
+  padding-top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.brand-logo {
+  width: 50px;
+  height: 50px;
+}
+
+.page h2 {
+  margin-bottom: 0;
+  color: #3333;
+}
+
+.page p {
+  margin-top: 10px;
+}
+
+.pages .page:nth-of-type(1) .input {
+  transform: translateX(-100%) scale(0.5);
+}
+
+.pages .page:nth-of-type(2) .input {
+  transform: translateX(-100%) scale(0.5);
+}
+
+.pages .page .input {
+  transition: all 1s;
+  opacity: 0;
+  transition-delay: 0s;
+}
+
+.pages .page .title {
+  margin-bottom: 10px;
+  font-size: 14px;
+  position: relative;
+  line-height: 14px;
+}
+
+.pages .page .input {
+  width: 100%;
+  margin-top: 20px;
+  padding: 0 30px;
+}
+
+.pages .page input.text {
+  background: #f6f7f9;
+  border: none;
+  border-radius: 4px;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  padding: 0px 10px;
+  color: rgba(0, 0, 0, 0.5);
+  outline: none;
+}
+
+.pages .page input[type="submit"] {
+  background: #e60023;
+  color: #f6f7f9;
+  height: 40px;
+  line-height: 40px;
+  width: 100%;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+}
+------------------------------------------------------------------------------------------------------------------
+<Container>
+      <Row
+        className="justify-content-md-center"
+        style={{ background: "white", padding: "20px", top: "30%" }}>
+        <Form noValidate validated={validated} onSubmit={handleSubmit}>
+          <Form.Row>
+            <Form.Group as={Col} md="4" controlId="validationCustom01">
+              <Form.Label>First name</Form.Label>
+              <Form.Control
+                required
+                type="text"
+                placeholder="First name"
+                defaultValue="Mark"
+              />
+              <Form.Control.Feedback type="invalid">
+                Look good
+              </Form.Control.Feedback>
+            </Form.Group>
+            <Form.Group as={Col} md="4" controlId="validationCustom02">
+              <Form.Label>Last name</Form.Label>
+              <Form.Control
+                required
+                type="text"
+                placeholder="Last name"
+                defaultValue="Otto"
+              />
+              <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
+            </Form.Group>
+            <Form.Group as={Col} md="4" controlId="validationCustomUsername">
+              <Form.Label>Username</Form.Label>
+              <InputGroup>
+                <InputGroup.Prepend>
+                  <InputGroup.Text id="inputGroupPrepend">@</InputGroup.Text>
+                </InputGroup.Prepend>
+                <Form.Control
+                  type="text"
+                  placeholder="Username"
+                  aria-describedby="inputGroupPrepend"
+                  required
+                />
+                <Form.Control.Feedback type="invalid">
+                  Please choose a username.
+                </Form.Control.Feedback>
+              </InputGroup>
+            </Form.Group>
+          </Form.Row>
+          <Form.Row>
+            <Form.Group as={Col} md="6" controlId="validationCustom03">
+              <Form.Label>City</Form.Label>
+              <Form.Control type="text" placeholder="City" required />
+              <Form.Control.Feedback type="invalid">
+                Please provide a valid city.
+              </Form.Control.Feedback>
+            </Form.Group>
+            <Form.Group as={Col} md="3" controlId="validationCustom04">
+              <Form.Label>State</Form.Label>
+              <Form.Control type="text" placeholder="State" required />
+              <Form.Control.Feedback type="invalid">
+                Please provide a valid state.
+              </Form.Control.Feedback>
+            </Form.Group>
+            <Form.Group as={Col} md="3" controlId="validationCustom05">
+              <Form.Label>Zip</Form.Label>
+              <Form.Control type="number" placeholder="Zip" required />
+              <Form.Control.Feedback type="invalid">
+                Please provide a valid zip.
+              </Form.Control.Feedback>
+            </Form.Group>
+          </Form.Row>
+          <Form.Group>
+            <Form.Check
+              required
+              label="Agree to terms and conditions"
+              feedback="You must agree before submitting."
+            />
+          </Form.Group>
+          <Button type="submit">Submit form</Button>
+        </Form>
+      </Row>
+    </Container>
+    ------------------------------------------------------------------------------------------------------------------
+
+    /* eslint-disable no-unused-vars */
+import React, { useState } from "react";
+import { Router, Link } from "@reach/router";
+import {
+  Container,
+  Row,
+  Form,
+  Col,
+  InputGroup,
+  Button,
+  FormControl,
+} from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./index.css";
+
+const App = () => {
+  const [validated, setValidated] = useState(false);
+
+  const handleSubmit = (event) => {
+    const form = event.currentTarget;
+    console.log;
+    event.preventDefault();
+    if (form.checkValidity() === false) {
+      event.stopPropagation();
+    }
+
+    setValidated(true);
+  };
+  const handler = (event) => {
+    console.log(event.target.value);
+  };
+  return (
+    
+      {/* noValidate to prevvent browser to use their UI
+          validated props for first rendering (otherwise all element will be red at first)
+          onSubmit is a event*/}
+          <div>
+      <Form noValidate validated={validated} onSubmit={handleSubmit} className="ls-container">
+        <Form.Row>
+          <Form.Group md="4" controlId="validationCustom01">
+            <Form.Label>First name</Form.Label>
+            <Form.Control
+              required
+              type="text"
+              placeholder="First name"
+              defaultValue="Mark"
+              onChange={handler}
+            />
+            <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
+          </Form.Group>
+          <Form.Group controlId="validationCustom02">
+            <Form.Label>Last name</Form.Label>
+            <Form.Control
+              required
+              type="text"
+              placeholder="Last name"
+              defaultValue="Otto"
+            />
+            <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
+          </Form.Group>
+          <Form.Group controlId="validationCustomUsername">
+            <Form.Label>Username</Form.Label>
+            <InputGroup>
+              <InputGroup.Prepend>
+                <InputGroup.Text id="inputGroupPrepend">@</InputGroup.Text>
+              </InputGroup.Prepend>
+              <Form.Control
+                type="text"
+                placeholder="Username"
+                aria-describedby="inputGroupPrepend"
+                required
+              />
+              <Form.Control.Feedback type="invalid">
+                Please choose a username.
+              </Form.Control.Feedback>
+            </InputGroup>
+          </Form.Group>
+        </Form.Row>
+        <Form.Row>
+          <Form.Group as={Col} md="6" controlId="validationCustom03">
+            <Form.Label>City</Form.Label>
+            <Form.Control type="text" placeholder="City" required />
+            <Form.Control.Feedback type="invalid">
+              Please provide a valid city.
+            </Form.Control.Feedback>
+          </Form.Group>
+          <Form.Group as={Col} md="3" controlId="validationCustom04">
+            <Form.Label>State</Form.Label>
+            <Form.Control type="text" placeholder="State" required />
+            <Form.Control.Feedback type="invalid">
+              Please provide a valid state.
+            </Form.Control.Feedback>
+          </Form.Group>
+          <Form.Group as={Col} md="3" controlId="validationCustom05">
+            <Form.Label>Zip</Form.Label>
+            <Form.Control type="text" placeholder="Zip" required />
+            <Form.Control.Feedback type="invalid">
+              Please provide a valid zip.
+            </Form.Control.Feedback>
+          </Form.Group>
+        </Form.Row>
+        <Form.Group>
+          <Form.Check
+            required
+            label="Agree to terms and conditions"
+            feedback="You must agree before submitting."
+          />
+        </Form.Group>
+        <Button type="submit">Submit form</Button>
+      </Form>
+    </div>
+  );
+};
+
+export default App;
+-------------------------------------------------------------------------------------------------------------------
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyBHDQU7IHb6UrR23Eb_g6f37tnxPPk3M44",
+    authDomain: "cool-blogger.firebaseapp.com",
+    databaseURL: "https://cool-blogger-default-rtdb.firebaseio.com",
+    projectId: "cool-blogger",
+    storageBucket: "cool-blogger.appspot.com",
+    messagingSenderId: "127877541169",
+    appId: "1:127877541169:web:a47879aa3b4e81e00dd410"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+
+-------------------------------------------------------------------------------------------------------------------
+
+<form onSubmit={this.handleSubmit}>
+  <h2>Introduction to Software Engineering</h2>
+  <h3>Provide a course overview</h3>
+  <Editor
+    value={this.state.content}
+    init={{
+      height: 500,
+      menubar: false
+    }}
+    onEditorChange={this.handleChange}
+  />
+  <br />
+  <input type="submit" value="Submit" />
+</form>

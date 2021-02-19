@@ -1,0 +1,3 @@
+Pet-app contain a source file for the "pet-app" to run this app.
+1. whatever file are in "src" move it or remove it.
+2. copy all the files to "src" and run project  
