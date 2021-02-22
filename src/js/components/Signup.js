@@ -15,8 +15,8 @@ const Signup = () => {
   const onPasswordChange = (event) => setPassword(event.target.value);
 
   const onSignup = () => {
-    // console.log("[Singup.js] > onSingup");
-    console.log(email, password);
+    // console.log("[Singup.js] > onSingup",email, password);
+
     const payload = {
       email: email,
       password: password,

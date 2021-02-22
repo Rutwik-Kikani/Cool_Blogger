@@ -15,7 +15,7 @@ const Signin = () => {
   const onPasswordChange = (event) => setPassword(event.target.value);
 
   const onSingin = () => {
-    // console.log("[SignIn > onSignIn]");
+    // console.log("[SignIn > onSignIn]", email, password);
     const payload = {
       email: email,
       password: password,

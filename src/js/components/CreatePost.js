@@ -71,17 +71,18 @@ const CreatePost = (props) => {
           <div className="c-post-input">
             {/* 2. */}
             <Editor
-              apiKey="286rum7qfli8zvfp9ivrr75c21i787ujb7ieyw7zw7kv01m1"
+              apiKey="a3annoldvmgidpki2spdersw1zn2cgqoh3f7tjd1tzxibnp1"
               value={content}
               init={{
                 height: 500,
                 content_style:
                   "body { font-family:Helvetica,Arial,sans-serif; font-size:14px }",
+                browser_spellcheck: true,
                 // menubar: false,
               }}
               plugins="code tinymcespellchecker textcolor link"
               toolbar="undo redo | formatselect | bold italic forecolor backcolor | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | spellchecker language spellcheckdialog"
-              spellchecker_language="en"
+              // spellchecker_language="en"
               onEditorChange={handleChange}
             />
           </div>

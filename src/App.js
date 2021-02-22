@@ -39,7 +39,7 @@ const App = () => {
   };
 
   useEffect(() => {
-    console.log("[App.js] > componentDidMount");
+    // console.log("[App.js] > componentDidMount");
     const c_user = getUserInfoFromLocal(); //c-user meaning current user
     //now check for unique property of c_user and then if it's there then set state also timeout
     if (c_user.localId) {

@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "dev": "parcel src/index.html",
-    "prod": "parcel build src/index.html",
+    "copy:css": "cpy  src/index.css dist",
+    "build:main": "parcel build src/index.js --no-content-hash --no-minify --no-cache --no-source-maps --out-dir dist",
+    "prod": "npm-run-all build:* copy:*",
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier \"src/**/*.{js,html}\" --write",
     "lint": "eslint \"src/**/*.{js,jsx}\" --quiet"
@@ -31,6 +33,7 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^3.2.0",
+    "npm-run-all": "^4.1.5",
     "parcel-bundler": "^1.12.4",
     "prettier": "^2.2.1",
     "react-hot-loader": "^4.13.0",
@@ -46,6 +49,7 @@
     "@tinymce/tinymce-react": "^3.10.1",
     "antd": "^4.12.3",
     "axios": "^0.21.1",
+    "cpy-cli": "^3.1.1",
     "firebase": "^8.2.7",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
